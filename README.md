@@ -1,6 +1,6 @@
-# :alarm_clock: Timer/Temporizador - Crônometro
+# :alarm_clock: Timer/Temporizador - Cronômetro
 
-Este é pequeno timer/temporizador/crônometro com alarme feito em React/Next para estudo. 
+Este é pequeno timer/temporizador/cronômetro com alarme feito em React/Next para estudo. 
 
 Possui Dark Mode :first_quarter_moon: :sun_with_face: e permite salvar configurações favoritas
 

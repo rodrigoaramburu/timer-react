@@ -1,4 +1,4 @@
-# Timer/Temporizador
+# Timer/Temporizador - Cronômetro
 
 Este é pequeno timer/temporizador feito em React/Next para estudo. 
 

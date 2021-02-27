@@ -87,7 +87,7 @@ export default function FormTimer() {
 
             </div>
             <div className={styles.formTimerTime}>
-                <label htmlFor="time" className={styles.srOnly}>Tempo do Timer/Crônometro</label>
+                <label htmlFor="time" className={styles.srOnly}>Tempo do Timer/Cronômetro</label>
                 <input
                     type="time"
                     id="time"
@@ -95,7 +95,7 @@ export default function FormTimer() {
                     value={formatSeconds(currentTimer.targetTime)}
                     onChange={timeHandler}
                     disabled={timerStatus !== TimerState.ready}
-                    title="Tempo do Timer/Crônometro" />
+                    title="Tempo do Timer/Cronômetro" />
             </div>
             <div className={styles.formTimerAlarm}>
 

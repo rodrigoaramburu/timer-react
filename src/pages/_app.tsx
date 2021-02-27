@@ -32,11 +32,11 @@ function MyApp({ Component, pageProps }) {
 
       <div className={`${styles.container}`}>
         <Head>
-          <title>Timer/Crônometro  Online</title>
+          <title>Timer/Cronômetro  Online</title>
 
-          <meta name="description" content="Timer/Temporizador - Crônometro Online para contagem regressiva de tempo com diversos sons de alarme para escolher." />
-          <meta property="og:title" content="Timer/Crônometro Online" />
-          <meta property="og:description" content="Timer/Temporizador - Crônometro Online para contagem regressiva de tempo com diversos sons de alarme para escolher" />
+          <meta name="description" content="Timer/Temporizador - Cronômetro Online para contagem regressiva de tempo com diversos sons de alarme para escolher." />
+          <meta property="og:title" content="Timer/Cronômetro Online" />
+          <meta property="og:description" content="Timer/Temporizador - Cronômetro Online para contagem regressiva de tempo com diversos sons de alarme para escolher" />
           <meta property="website:section" content="Timer" />
 
           <meta name="robots" content="index, follow" />
@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }) {
           <meta property="og:locale" content="pt_BR" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://timer.botecodigital.dev.br/" />
-          <meta property="og:site_name" content="Timer/Temporizador - Crônometro Online" />
+          <meta property="og:site_name" content="Timer/Temporizador - Cronômetro Online" />
 
 
           <meta property="og:image" content="https://timer.botecodigital.dev.br/logo512.png" />

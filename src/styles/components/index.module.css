@@ -1,0 +1,15 @@
+.indexContainer{
+    flex: 1;
+    display: grid;
+    grid-template-columns:  1.4fr 0.6fr;
+    gap: 1rem;
+    align-content: center;
+    margin-top: 3rem
+}
+
+@media(max-width: 720px) {
+    .indexContainer{
+        grid-template-columns:  1fr;
+        gap: 1rem;
+    }
+}

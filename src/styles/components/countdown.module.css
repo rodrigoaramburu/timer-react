@@ -1,0 +1,84 @@
+.countdownContainer {
+    position: relative;
+    margin-top: 10px;
+    background: var(--box-background);
+    border-radius: 5px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdownTime {
+    font-size: 5rem;
+    padding: 10px;
+}
+
+@media(max-width: 720px) {
+    .countdownTime {
+        font-size: 3rem;
+    }   
+}
+
+.countdownButton {
+    width: 100%;
+    font-size: 2rem;
+    padding: 20px;
+    border: 0px;
+    border-radius: 5px;
+    background: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: filter 0.3s
+}
+
+@media(max-width: 720px) {
+    .countdownButton {
+        font-size: 1.5rem;
+    }   
+}
+
+
+
+.countdownButton:hover {
+    filter: brightness(1.3)
+}
+
+
+
+.countdownProgressBar{
+    border: 1px solid var(--field-border);
+    height:14px;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0;
+    overflow: hidden;
+    padding:1px;
+}
+
+
+.countdownProgressBar > div{
+    background: var(--green);
+    height:10px;
+    border-radius: 3px;
+}
+
+.coutdownButtonResetTop{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin: 10px;
+    border: 0;
+    background: transparent;
+
+    filter: var(--icon-color-filter);
+}
+

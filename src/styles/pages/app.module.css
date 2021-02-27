@@ -1,0 +1,46 @@
+.light {
+    --white: #FFF;
+    --box-background: #FFF;
+    --background: #F2F3F5;
+    --text: #333333;
+    --red: #d6314c;
+    --green: #42c521;
+    --blue: #4c57ce;
+    --field-border: #333;
+    --icon-color-filter: none;
+}
+
+.dark {
+    --white: #FFF;
+    --box-background: #444;
+    --background: #000000;
+    --text: #FFFFFF;
+    --red: #e91313;
+    --green: #42c521;
+    --blue: #4c57ce;
+    --field-border: #FFF;
+    --icon-color-filter: invert();
+}
+
+.themeContainer {
+    background: var(--background);
+    color: var(--text);
+    height: 100%;
+}
+
+.container{
+    min-height: 100vh;
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media(max-width: 720px) {
+    .container{
+        padding: 1rem;
+    }   
+}

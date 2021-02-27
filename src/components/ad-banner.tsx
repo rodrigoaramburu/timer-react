@@ -4,7 +4,7 @@ const AdBanner = () => {
     useEffect(() => {
         try {
             let adsbygoogle = window.adsbygoogle || []
-            adsbygoogle.push({});
+            //adsbygoogle.push({});
         } catch (err) {
             console.log(err);
         }

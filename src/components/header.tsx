@@ -5,7 +5,7 @@ import AdBanner from "./ad-banner";
 const Header = () => (
   <header className={styles.headerContainer}>
 
-    <h1>Timer/Crnômetro Online</h1>
+    <h1>Timer/Cronômetro Online</h1>
     <p>Timer/Cronômetro Online para contagem regressiva de tempo com diversos som de alarme para escolher.</p>
  
     <AdBanner />

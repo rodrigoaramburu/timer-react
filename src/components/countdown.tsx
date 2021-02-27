@@ -19,7 +19,7 @@ export default function Countdown() {
 
     let timeDisplay = time;
     if (currentTimer.regressive) {
-        timeDisplay = currentTimer.targetTime - time;
+        timeDisplay = currentTimer.targetTime - Math.floor(time);
     }
 
     const hours = Math.floor(timeDisplay / 3600).toString().padStart(2, '0');

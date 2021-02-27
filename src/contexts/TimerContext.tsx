@@ -40,8 +40,6 @@ export interface Timer {
     regressive: boolean;
 }
 
-let timerTimeout: NodeJS.Timeout;
-
 export default function TimerProvider({ children }: TimerProviderProps) {
 
     const [currentTimer, setCurrentTimer] = useState<Timer>({
@@ -57,6 +55,7 @@ export default function TimerProvider({ children }: TimerProviderProps) {
 
     const [listTimers, setListTimers] = useState<Timer[]>([]);
 
+    const [lastTime, setLastTime] = useState(0);
 
     useEffect(() => {
         Notification.requestPermission();
@@ -65,46 +64,52 @@ export default function TimerProvider({ children }: TimerProviderProps) {
 
     useInterval(() => {
         process()
-    }, 1000);
+    }, 500);
 
     function process() {
-            const newTime = time + 1;
-
+            let newTime = time;
+            if( lastTime !== 0){
+                const nowTime = new Date().getTime();
+                newTime = time + (nowTime - lastTime) / 1000;
+                setLastTime(nowTime);
+            }
+            
             if (timerStatus == TimerState.running) {
                 setTime(newTime);
             }
             if (newTime >= currentTimer.targetTime && timerStatus === TimerState.running) {
                 setTimerStatus(TimerState.playing);
+                setLastTime(0);
                 audio.play();
-                clearTimeout(timerTimeout);
 
                 if (Notification.permission === 'granted') {
                     new Notification('Timer finalizado', {
                         body: `O Timer  "${currentTimer.name != '' ? currentTimer.name : 'Sem Titulo'}" terminou!`,
-                        silent: true
+                        silent: true,
+                        icon:'/icon-white.png'
                     });
                 }
             }
     }
 
     function startTimer(): void {
-
         const newAudio = new Audio(`/alarms/${currentTimer.soundAlarm}.mp3`);
         newAudio.addEventListener('ended', () => {
-
             setTimerStatus(TimerState.stop);
         });
         setAudio(newAudio);
         setTimerStatus(TimerState.running);
+        setLastTime( new Date().getTime() );
     }
 
     function pauseTimer(): void {
         setTimerStatus(TimerState.paused);
-        clearTimeout(timerTimeout);
+        setLastTime(0);
     }
 
     function unpauseTimer(): void {
         setTimerStatus(TimerState.running);
+        setLastTime( new Date().getTime() );
     }
 
     function stopAlarm(): void {
@@ -116,6 +121,7 @@ export default function TimerProvider({ children }: TimerProviderProps) {
     function reset(): void {
         setTimerStatus(TimerState.ready);
         setTime(0);
+        setLastTime(0);
     }
 
     function novoTimer(): void {

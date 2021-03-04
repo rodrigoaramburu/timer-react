@@ -4,7 +4,7 @@ const AdBanner = () => {
     useEffect(() => {
         try {
             let adsbygoogle = window.adsbygoogle || []
-            //adsbygoogle.push({});
+            adsbygoogle.push({});
         } catch (err) {
             console.log(err);
         }
@@ -17,8 +17,8 @@ const AdBanner = () => {
                 style={{ display: 'block', textAlign: 'center' }}
                 data-ad-layout="in-article"
                 data-ad-format="fluid"
-                data-ad-client="ca-pub-XXXXXX"
-                data-ad-slot="XXXXXX"></ins>
+                data-ad-client="ca-pub-XXXX"
+                data-ad-slot="XXXX"></ins>
         </div>
     );
 };

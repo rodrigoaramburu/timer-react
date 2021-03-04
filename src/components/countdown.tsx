@@ -30,9 +30,10 @@ export default function Countdown() {
 
     useEffect(() => {
         const title = document.querySelector('title');
-        if (title != null) {
+        if (title != null && timerStatus !== TimerState.ready) {
             title.innerText = hours + ":" + minutes + ":" + seconds;
         }
+        
     }, [time]);
 
     return (

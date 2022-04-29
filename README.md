@@ -4,8 +4,6 @@ Este é pequeno timer/temporizador/cronômetro com alarme feito em React/Next pa
 
 Possui Dark Mode :first_quarter_moon: :sun_with_face: e permite salvar configurações favoritas
 
-Pode ser visualizado no endereço: https://timer.botecodigital.dev.br/
-
 
 
 ## Light
